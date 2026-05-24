@@ -733,6 +733,16 @@ section { padding: 6rem 2rem; }
   flex-shrink: 0;
 }
 
+.contact-email-link {
+  color: var(--stone);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-email-link:hover {
+  color: var(--moss);
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -791,16 +801,22 @@ textarea { resize: vertical; min-height: 120px; }
 footer {
   background: var(--forest);
   color: rgba(255,255,255,0.7);
-  padding: 3rem 2rem;
+  padding: 3rem 2rem 1.5rem;
   font-size: 0.85rem;
 }
 
-.footer-content {
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 3rem;
+}
+
+.footer-brand {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .footer-logo {
@@ -812,10 +828,6 @@ footer {
   flex-shrink: 0;
 }
 
-.footer-text {
-  text-align: left;
-}
-
 .footer-name {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.3rem;
@@ -823,15 +835,40 @@ footer {
   margin-bottom: 0.5rem;
 }
 
+.footer-nav h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 0.75rem;
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
 .footer-link {
-  color: rgba(255,255,255,0.75);
+  color: rgba(255,255,255,0.65);
   text-decoration: none;
   font-size: 0.85rem;
   transition: color 0.3s;
 }
 
 .footer-link:hover {
-  color: rgba(255,255,255,0.9);
+  color: rgba(255,255,255,0.95);
+}
+
+.footer-bottom {
+  max-width: 1100px;
+  margin: 2rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+  font-size: 0.8rem;
 }
 
 /* POLICY PAGE */
@@ -1258,6 +1295,117 @@ footer {
   border-radius: 2px;
 }
 
+/* CRUISE LANDING PAGE */
+.cruise-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 700px;
+}
+
+.cruise-step {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.cruise-step-number {
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--moss);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.cruise-step-content h3 {
+  font-size: 1.3rem;
+  color: var(--forest);
+  margin-bottom: 0.35rem;
+}
+
+.cruise-step-content p {
+  color: var(--stone);
+  font-size: 0.95rem;
+}
+
+.cruise-pack-list {
+  list-style: none;
+  padding: 0;
+}
+
+.cruise-pack-list li {
+  color: var(--stone);
+  font-size: 0.95rem;
+  padding: 0.4rem 0 0.4rem 1.25rem;
+  position: relative;
+}
+
+.cruise-pack-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.85rem;
+  width: 6px;
+  height: 6px;
+  background: var(--moss);
+  border-radius: 50%;
+}
+
+.cruise-booking-cta {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: var(--forest);
+  border-radius: 4px;
+  color: var(--white);
+}
+
+.cruise-booking-cta h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.cruise-booking-cta p {
+  color: rgba(255,255,255,0.8);
+  font-size: 1.05rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.cruise-booking-details {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.cruise-booking-stat {
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--white);
+  padding: 0.4rem 1rem;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 2px;
+}
+
+.cruise-booking-cta .region-cta {
+  background: var(--white);
+  color: var(--forest);
+}
+
+.cruise-booking-cta .region-cta:hover {
+  background: var(--mist);
+}
+
 @media (max-width: 900px) {
   .itinerary-grid {
     grid-template-columns: 1fr;
@@ -1305,6 +1453,21 @@ footer {
   .contact-layout {
     grid-template-columns: 1fr;
     gap: 2.5rem;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-brand {
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-nav {
+    text-align: center;
   }
 }
 

@@ -10,7 +10,7 @@
             <rect x="2" y="4" width="20" height="16" rx="2"/>
             <path d="M22 4L12 13 2 4"/>
           </svg>
-          {{ .Site.Params.email }}
+          <a href="mailto:{{ .Site.Params.email }}" class="contact-email-link">{{ .Site.Params.email }}</a>
         </div>
         <div class="contact-detail">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -35,7 +35,8 @@
           <select id="region" name="region">
             <option value="appalachia">Appalachia</option>
             <option value="alaska">Southeast Alaska</option>
-            <option value="either">Open to Either</option>
+            <option value="cruise">Cruise Ship Excursion (Juneau)</option>
+            <option value="other">Other — specify in message below</option>
           </select>
         </div>
         <div>

@@ -1,0 +1,117 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "{{ .Site.BaseURL }}#business",
+      "name": "{{ .Site.Title }}",
+      "description": "{{ .Site.Params.description }}",
+      "url": "{{ .Site.BaseURL }}",
+      "email": "{{ .Site.Params.email }}",
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "New River Gorge National Park, West Virginia"
+        },
+        {
+          "@type": "Place",
+          "name": "Monongahela National Forest, West Virginia"
+        },
+        {
+          "@type": "Place",
+          "name": "Juneau, Alaska"
+        }
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Jeff",
+        "jobTitle": "Founder & Lead Guide",
+        "image": "{{ .Site.BaseURL }}img/guide.jpg"
+      },
+      "image": "{{ .Site.BaseURL }}img/logo.png",
+      "priceRange": "$500–$2100",
+      "knowsAbout": ["Hiking", "Wilderness First Response", "Leave No Trace", "Appalachian Ecology", "Tongass Rainforest"],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "certification",
+          "name": "NOLS Wilderness First Responder"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "certification",
+          "name": "NOLS Wilderness First Aid"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "certification",
+          "name": "Outdoor Guide Certification, University of Wyoming"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "certification",
+          "name": "Leave No Trace"
+        }
+      ]
+    },
+    {
+      "@type": "TouristTrip",
+      "@id": "{{ .Site.BaseURL }}#appalachia-trip",
+      "name": "Guided Day Hike — Appalachia",
+      "description": "Guided day hikes through New River Gorge National Park and Monongahela National Forest in southern West Virginia. Small groups of up to 6 guests, all skill levels.",
+      "touristType": ["Hikers", "Nature Lovers", "Families"],
+      "provider": { "@id": "{{ .Site.BaseURL }}#business" },
+      "offers": {
+        "@type": "Offer",
+        "price": "500",
+        "priceCurrency": "USD",
+        "description": "Around $500 per trip (up to 6 guests)",
+        "availability": "https://schema.org/InStock"
+      },
+      "itinerary": {
+        "@type": "ItemList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Endless Wall Trail — New River Gorge National Park" },
+          { "@type": "ListItem", "position": 2, "name": "Long Point Trail — New River Gorge National Park" },
+          { "@type": "ListItem", "position": 3, "name": "Kaymoor Miners Trail — New River Gorge National Park" },
+          { "@type": "ListItem", "position": 4, "name": "Castle Rock Trail — New River Gorge National Park" },
+          { "@type": "ListItem", "position": 5, "name": "Grandview Rim Trail — New River Gorge National Park" }
+        ]
+      }
+    },
+    {
+      "@type": "TouristTrip",
+      "@id": "{{ .Site.BaseURL }}#alaska-trip",
+      "name": "Guided Day Hike — Southeast Alaska",
+      "description": "Guided day hikes through Tongass National Forest near Juneau, Alaska. Glacier views, temperate rainforest, and wildlife. Cruise ship excursions available. Small groups of up to 6 guests.",
+      "touristType": ["Hikers", "Nature Lovers", "Cruise Ship Passengers", "Families"],
+      "provider": { "@id": "{{ .Site.BaseURL }}#business" },
+      "offers": {
+        "@type": "Offer",
+        "price": "2100",
+        "priceCurrency": "USD",
+        "description": "Around $2,100 per trip (up to 6 guests)",
+        "availability": "https://schema.org/InStock"
+      },
+      "itinerary": {
+        "@type": "ItemList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "East Glacier Trail — Juneau, AK" },
+          { "@type": "ListItem", "position": 2, "name": "West Glacier Trail — Juneau, AK" },
+          { "@type": "ListItem", "position": 3, "name": "Nugget Falls Trail — Juneau, AK" },
+          { "@type": "ListItem", "position": 4, "name": "Treadwell Mine Historic Trail — Juneau, AK" },
+          { "@type": "ListItem", "position": 5, "name": "Rainforest Trail — Juneau, AK" },
+          { "@type": "ListItem", "position": 6, "name": "Point Retreat Trail — Admiralty Island, AK" }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "url": "{{ .Site.BaseURL }}",
+      "name": "{{ .Site.Title }}",
+      "description": "{{ .Site.Params.description }}"
+    }
+  ]
+}
+</script>
