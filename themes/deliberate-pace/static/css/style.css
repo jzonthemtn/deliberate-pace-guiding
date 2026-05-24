@@ -325,6 +325,7 @@ section { padding: 6rem 2rem; }
   align-items: flex-end;
   padding: 1.5rem;
   position: relative;
+  text-decoration: none;
 }
 
 .region-img::after {
@@ -999,6 +1000,8 @@ footer {
   padding: 2rem;
   border-radius: 4px;
   box-shadow: 0 2px 15px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
 }
 
 .trail-card h3 {
@@ -1027,6 +1030,27 @@ footer {
 .trail-card p {
   color: var(--stone);
   font-size: 0.95rem;
+}
+
+.trail-card-link {
+  display: inline-block;
+  margin-top: auto;
+  padding-top: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid var(--moss);
+  color: var(--moss);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.trail-card-link:hover {
+  background: var(--moss);
+  color: var(--white);
 }
 
 .expect-grid {
@@ -1066,6 +1090,182 @@ footer {
 
 .page-section-alt .trail-card {
   background: var(--white);
+}
+
+.itinerary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.itinerary-card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.04);
+}
+
+.itinerary-card h3 {
+  font-size: 1.4rem;
+  color: var(--forest);
+  margin-bottom: 0.75rem;
+}
+
+.itinerary-summary {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.itinerary-stat {
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--moss);
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--mist);
+  border-radius: 2px;
+}
+
+.itinerary-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: itinerary;
+}
+
+.itinerary-list li {
+  position: relative;
+  padding-left: 2rem;
+  padding-bottom: 1.5rem;
+  border-left: 1px solid var(--mist);
+  margin-left: 0.5rem;
+  counter-increment: itinerary;
+}
+
+.itinerary-list li:last-child {
+  padding-bottom: 0;
+  border-left: none;
+}
+
+.itinerary-list li::before {
+  content: counter(itinerary);
+  position: absolute;
+  left: -0.65rem;
+  top: 0;
+  width: 1.3rem;
+  height: 1.3rem;
+  background: var(--moss);
+  color: var(--white);
+  border-radius: 50%;
+  font-size: 0.7rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.itinerary-list li strong {
+  display: block;
+  color: var(--forest);
+  font-size: 1rem;
+}
+
+.itinerary-list li > span {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--moss);
+  margin: 0.2rem 0 0.4rem;
+}
+
+.itinerary-list li p {
+  color: var(--stone);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.itinerary-tip {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: var(--cloud);
+  border-left: 3px solid var(--moss);
+  border-radius: 2px;
+  font-size: 0.9rem;
+  color: var(--stone);
+}
+
+.itinerary-tip strong {
+  color: var(--forest);
+}
+
+.itinerary-note {
+  grid-column: 1 / -1;
+  padding: 1.5rem 2rem;
+  background: var(--white);
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.04);
+}
+
+.itinerary-note p {
+  color: var(--stone);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.itinerary-note a {
+  color: var(--moss);
+  text-decoration: underline;
+}
+
+.things-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.things-card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+}
+
+.things-card h3 {
+  font-size: 1.4rem;
+  color: var(--forest);
+  margin-bottom: 0.75rem;
+}
+
+.things-card p {
+  color: var(--stone);
+  font-size: 0.95rem;
+}
+
+.things-tag {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--moss);
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--mist);
+  border-radius: 2px;
+}
+
+@media (max-width: 900px) {
+  .itinerary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .things-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* MOBILE */
