@@ -1,13 +1,13 @@
-<nav>
-  <a href="#" class="nav-logo">Deliberate Pace</a>
-  <button class="menu-toggle" aria-label="Toggle menu">
+<nav{{ if not .IsHome }} class="scrolled"{{ end }}>
+  <a href="/" class="nav-logo">Deliberate Pace Expeditions</a>
+  <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
     <span></span><span></span><span></span>
   </button>
-  <ul class="nav-links">
-    <li><a href="#philosophy">Philosophy</a></li>
-    <li><a href="#regions">Regions</a></li>
-    <li><a href="#experiences">Experiences</a></li>
-    <li><a href="#guide">Your Guide</a></li>
-    <li><a href="#contact">Get in Touch</a></li>
+  <ul class="nav-links" id="nav-links" role="navigation" aria-label="Main navigation">
+    <li><a href="/#philosophy">Philosophy</a></li>
+    <li><a href="/#regions">Regions</a></li>
+    <li><a href="/#experiences">Experiences</a></li>
+    <li><a href="/#guide">Your Guide</a></li>
+    <li><a href="/#contact">Get in Touch</a></li>
   </ul>
 </nav>
