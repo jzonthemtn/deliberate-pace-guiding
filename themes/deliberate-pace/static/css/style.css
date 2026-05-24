@@ -871,6 +871,21 @@ footer {
   font-size: 0.8rem;
 }
 
+.footer-back-to-top {
+  display: inline-block;
+  color: rgba(255,255,255,0.65);
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  transition: color 0.3s;
+}
+
+.footer-back-to-top:hover {
+  color: rgba(255,255,255,0.95);
+}
+
 /* POLICY PAGE */
 .policy-page {
   padding-top: 8rem;
