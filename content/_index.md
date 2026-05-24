@@ -1,3 +1,3 @@
 ---
-title: "Deliberate Pace Expeditions"
+title: "Deliberate Pace Guiding"
 ---

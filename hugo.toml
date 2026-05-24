@@ -1,6 +1,6 @@
 baseURL = 'https://example.org/'
 locale = 'en-us'
-title = 'Deliberate Pace Expeditions'
+title = 'Deliberate Pace Guiding'
 theme = 'deliberate-pace'
 
 [params]

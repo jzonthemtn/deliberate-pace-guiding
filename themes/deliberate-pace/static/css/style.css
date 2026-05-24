@@ -332,6 +332,19 @@ section { padding: 6rem 2rem; }
   color: var(--white);
 }
 
+.region-badge {
+  display: inline-block;
+  margin-top: 1.25rem;
+  padding: 0.4rem 0.9rem;
+  background: var(--stone);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+
 .region-body {
   padding: 2rem;
 }
