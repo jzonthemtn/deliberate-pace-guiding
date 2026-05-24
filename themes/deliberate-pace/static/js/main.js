@@ -30,15 +30,3 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-// Form handling
-function handleSubmit(e) {
-  e.preventDefault();
-  const btn = e.target.querySelector('.submit-btn');
-  btn.textContent = 'Message Sent!';
-  btn.style.background = '#4A7C5C';
-  setTimeout(() => {
-    btn.textContent = 'Send Message';
-    btn.style.background = '';
-    e.target.reset();
-  }, 3000);
-}
