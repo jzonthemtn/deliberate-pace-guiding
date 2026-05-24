@@ -1,8 +1,11 @@
-// Scroll-aware nav
+// Scroll-aware nav (only toggle on homepage)
 const nav = document.querySelector('nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 50);
-});
+const isHome = document.body.querySelector('.hero') !== null;
+if (isHome) {
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  });
+}
 
 // Mobile menu
 const toggle = document.querySelector('.menu-toggle');

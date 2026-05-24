@@ -278,6 +278,23 @@ section { padding: 6rem 2rem; }
   font-size: 0.95rem;
 }
 
+.region-disclaimer {
+  margin-top: 0.5rem;
+  font-size: 0.78rem;
+  color: var(--stone);
+}
+
+.inspiration-cta {
+  margin-top: 2.5rem;
+  color: var(--stone);
+  font-size: 1rem;
+}
+
+.inspiration-cta a {
+  color: var(--moss);
+  text-decoration: underline;
+}
+
 /* REGIONS */
 .regions {
   background: var(--cloud);
@@ -381,7 +398,6 @@ section { padding: 6rem 2rem; }
 
 .region-cta {
   display: inline-block;
-  margin-top: 1.25rem;
   padding: 0.75rem 2rem;
   background: var(--forest);
   color: var(--white);
@@ -396,6 +412,23 @@ section { padding: 6rem 2rem; }
 
 .region-cta:hover {
   background: var(--moss);
+}
+
+.region-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.region-cta-outline {
+  background: none;
+  border: 1px solid var(--forest);
+  color: var(--forest);
+}
+
+.region-cta-outline:hover {
+  background: var(--forest);
+  color: var(--white);
 }
 
 /* EXPERIENCE */
@@ -868,6 +901,171 @@ footer {
   margin-top: 2rem;
   font-size: 0.85rem;
   color: var(--stone);
+}
+
+/* PACKING LIST */
+.packing-section {
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--mist);
+}
+
+.packing-section:last-of-type {
+  border-bottom: none;
+}
+
+.packing-section h2 {
+  font-size: 1.8rem;
+  color: var(--forest);
+  margin-bottom: 0.75rem;
+}
+
+.packing-section h3 {
+  font-size: 1.2rem;
+  color: var(--forest);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.packing-section > p {
+  color: var(--stone);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+/* SUBPAGES */
+.page-hero {
+  position: relative;
+  height: 40vh;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.appalachia-page-hero {
+  background: linear-gradient(135deg, rgba(30,50,40,0.3), rgba(30,50,40,0.15)), url('/img/appalachia.jpg') center/cover no-repeat;
+}
+
+.alaska-page-hero {
+  background: linear-gradient(135deg, rgba(30,50,40,0.3), rgba(30,50,40,0.15)), url('/img/alaska.jpg') center/cover no-repeat;
+}
+
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(30,50,40,0.4), rgba(30,50,40,0.6));
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 0 2rem;
+}
+
+.page-hero-content h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--white);
+  margin-bottom: 0.75rem;
+}
+
+.page-hero-content p {
+  color: rgba(255,255,255,0.8);
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.page-section {
+  padding: 5rem 2rem;
+  background: var(--cream);
+}
+
+.page-section-alt {
+  background: var(--cloud);
+}
+
+.trail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.trail-card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.04);
+}
+
+.trail-card h3 {
+  font-size: 1.4rem;
+  color: var(--forest);
+  margin-bottom: 0.75rem;
+}
+
+.trail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.trail-tag {
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--moss);
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--mist);
+  border-radius: 2px;
+}
+
+.trail-card p {
+  color: var(--stone);
+  font-size: 0.95rem;
+}
+
+.expect-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.expect-item h3 {
+  font-size: 1.3rem;
+  color: var(--forest);
+  margin-bottom: 0.5rem;
+}
+
+.expect-item p {
+  color: var(--stone);
+  font-size: 0.95rem;
+}
+
+.page-cta {
+  margin-top: 3rem;
+  padding: 1.5rem 2rem;
+  background: var(--cloud);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.page-cta p {
+  color: var(--stone);
+  font-size: 1rem;
+}
+
+.page-cta a {
+  color: var(--moss);
+  text-decoration: underline;
+}
+
+.page-section-alt .trail-card {
+  background: var(--white);
 }
 
 /* MOBILE */

@@ -5,8 +5,8 @@ theme = 'deliberate-pace'
 
 [params]
   tagline = 'Walk Slowly. See Everything.'
-  description = 'Guided day hikes in Appalachia and Southeastern Alaska. Small group hiking expeditions through New River Gorge National Park, Monongahela National Forest, and Juneau, Alaska. NOLS certified guide, all skill levels welcome.'
-  keywords = 'hiking guide, guided hikes, day hikes, Appalachia hiking, Southeastern Alaska hiking, New River Gorge, Monongahela National Forest, Juneau Alaska hiking, small group hikes, West Virginia hiking, cruise ship excursions Juneau, wilderness guide, NOLS certified, Leave No Trace, Endless Wall Trail, Long Point Trail, East Glacier Trail'
-  email = 'jeff@deliberatepace.com'
+  description = 'Guided day hikes in Appalachia and Southeast Alaska. Small group hiking expeditions through New River Gorge National Park, Monongahela National Forest, and Juneau, Alaska. NOLS certified guide, all skill levels welcome.'
+  keywords = 'hiking guide, guided hikes, day hikes, Appalachia hiking, Southeast Alaska hiking, New River Gorge, Monongahela National Forest, Juneau Alaska hiking, small group hikes, West Virginia hiking, cruise ship excursions Juneau, wilderness guide, NOLS certified, Leave No Trace, Endless Wall Trail, Long Point Trail, East Glacier Trail'
+  email = 'jeff@deliberatepaceguiding.com'
   location = 'Based in the Southern Appalachians'
   maxGuests = '1-6'
