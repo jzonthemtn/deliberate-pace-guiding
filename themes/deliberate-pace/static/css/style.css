@@ -255,8 +255,9 @@ section { padding: 6rem 2rem; }
 
 .photo-strip {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.75rem;
+  margin-top: 2.5rem;
 }
 
 .photo-strip-item {
@@ -344,12 +345,7 @@ section { padding: 6rem 2rem; }
   line-height: 1.4;
 }
 
-@media (max-width: 900px) {
-  .photo-strip { grid-template-columns: repeat(2, 1fr); }
-}
-
 @media (max-width: 600px) {
-  .photo-strip { grid-template-columns: 1fr; }
   .photo-strip-item img { height: 220px; }
 }
 
@@ -517,6 +513,23 @@ section { padding: 6rem 2rem; }
   color: var(--stone);
   font-size: 0.95rem;
   margin-bottom: 1.5rem;
+}
+
+.region-parks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.region-park {
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: var(--forest);
+  background: var(--mist);
+  padding: 0.4rem 0.85rem;
+  border-radius: 2px;
+  font-weight: 500;
 }
 
 .region-details {
@@ -861,6 +874,20 @@ section { padding: 6rem 2rem; }
   color: var(--stone);
   font-size: 1rem;
   margin-bottom: 2rem;
+}
+
+.contact-helper {
+  font-size: 0.9rem !important;
+  font-style: italic;
+  padding: 0.9rem 1.1rem;
+  background: var(--cloud);
+  border-left: 3px solid var(--moss);
+  border-radius: 2px;
+  margin-bottom: 2rem !important;
+}
+
+.contact-helper a {
+  color: var(--forest);
 }
 
 .contact-detail {
