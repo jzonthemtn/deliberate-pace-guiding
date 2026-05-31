@@ -33,3 +33,44 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
+// Lightbox for photo strips
+(function() {
+  const triggers = document.querySelectorAll('.photo-strip-item img');
+  const lightbox = document.getElementById('lightbox');
+  if (!triggers.length || !lightbox) return;
+
+  const lightboxImg = lightbox.querySelector('.lightbox-img');
+  const lightboxCaption = lightbox.querySelector('.lightbox-caption');
+  const closeBtn = lightbox.querySelector('.lightbox-close');
+
+  function open(img) {
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    const figcaption = img.parentElement.querySelector('.photo-strip-caption');
+    lightboxCaption.textContent = figcaption ? figcaption.textContent : '';
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function close() {
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    lightboxImg.src = '';
+    lightboxCaption.textContent = '';
+  }
+
+  triggers.forEach(img => {
+    img.addEventListener('click', () => open(img));
+  });
+
+  closeBtn.addEventListener('click', close);
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) close();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('open')) close();
+  });
+})();
+
