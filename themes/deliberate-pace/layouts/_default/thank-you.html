@@ -1,0 +1,9 @@
+{{ define "main" }}
+<section class="policy-page">
+  <div class="container">
+    <h1 class="policy-heading">{{ .Title }}</h1>
+    {{ .Content }}
+    <p><a href="{{ "/" | relURL }}" class="contact-email-link">&larr; Back to home</a></p>
+  </div>
+</section>
+{{ end }}
