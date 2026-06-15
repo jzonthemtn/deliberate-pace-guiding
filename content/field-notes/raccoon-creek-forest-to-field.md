@@ -38,7 +38,7 @@ A short drive west of Pittsburgh, [Raccoon Creek State Park](https://www.pa.gov/
 
 The park has more history than its quiet trails let on. In the 1930s it was one of five Recreational Demonstration Areas in Pennsylvania, tired farmland that the federal government set aside to recover. Civilian Conservation Corps and WPA crews built it out for the National Park Service between 1934 and 1941, and it later became a state park. Today it covers more than 7,500 acres, which makes it one of the largest state parks in Pennsylvania, with a 100-acre lake near its center.
 
-It is a good place to hike because so many of the trails intersect. You can put together your own route and make the day as short or as long as you want, turning back toward the car or pushing on deeper into the park as you go.
+It is a good place to hike because so many of the trails intersect. You can put together your own route and make the day as short or as long as you want, turning back toward the car or pushing on deeper into the park as you go. The park's [full list of trails](https://www.pa.gov/agencies/dcnr/recreation/where-to-go/state-parks/find-a-park/raccoon-creek-state-park/hiking) is a good place to start planning.
 
 The far side of the park holds a wildflower preserve that I did not reach today. I will save it for a later field note of its own.
 
