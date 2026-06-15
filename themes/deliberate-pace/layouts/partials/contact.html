@@ -22,31 +22,7 @@
         </div>
       </div>
 
-      <form class="fade-in" action="https://formspree.io/f/mgoqlowg" method="POST">
-        <input type="hidden" name="_next" value="{{ "thank-you/" | absURL }}">
-        <div>
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required aria-required="true">
-        </div>
-        <div>
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required aria-required="true">
-        </div>
-        <div>
-          <label for="region">Region of Interest</label>
-          <select id="region" name="region">
-            <option value="appalachia">Appalachia</option>
-            <option value="alaska">Southeast Alaska</option>
-            <option value="cruise">Cruise Ship Excursion (Juneau)</option>
-            <option value="other">Other — specify in message below</option>
-          </select>
-        </div>
-        <div>
-          <label for="message">Tell Me About Your Ideal Trip</label>
-          <textarea id="message" name="message"></textarea>
-        </div>
-        <button type="submit" class="submit-btn">Send Message</button>
-      </form>
+      {{ partial "contact-form.html" (dict "class" "fade-in") }}
 
     </div>
   </div>

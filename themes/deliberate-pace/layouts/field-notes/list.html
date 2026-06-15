@@ -1,0 +1,32 @@
+{{ define "main" }}
+<section class="policy-page field-notes">
+  <div class="container">
+    <h1 class="policy-heading field-notes-heading">{{ .Title }}</h1>
+    {{ with .Content }}<div class="field-notes-intro fade-in">{{ . }}</div>{{ end }}
+
+    {{ if .Pages }}
+    <div class="note-cards">
+      {{ range .Pages }}
+      {{ $url := .RelPermalink }}
+      <article class="note-card fade-in">
+        {{ with .Params.image }}
+        <a href="{{ $url }}" class="note-img" style="background-image:url('{{ . }}')" aria-hidden="true" tabindex="-1"></a>
+        {{ end }}
+        <div class="note-body">
+          <div class="note-meta">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+            {{ with .Params.region }}<span class="note-region">{{ . }}</span>{{ end }}
+          </div>
+          <h2 class="note-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          <p class="note-summary">{{ .Description | default .Summary }}</p>
+          <a href="{{ .RelPermalink }}" class="note-readmore">Read this entry &rarr;</a>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+    {{ else }}
+    <p class="field-notes-empty">No entries yet. Check back soon.</p>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

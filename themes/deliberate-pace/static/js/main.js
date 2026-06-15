@@ -33,6 +33,38 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
+// Contact modal (field notes)
+(function() {
+  const modal = document.getElementById('contact-modal');
+  if (!modal) return;
+
+  const openers = document.querySelectorAll('[data-contact-open]');
+  const closeBtn = modal.querySelector('.contact-modal-close');
+
+  function open() {
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    const firstField = modal.querySelector('input, textarea, select');
+    if (firstField) firstField.focus();
+  }
+
+  function close() {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  openers.forEach(btn => btn.addEventListener('click', open));
+  closeBtn.addEventListener('click', close);
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) close();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) close();
+  });
+})();
+
 // Lightbox for photo strips
 (function() {
   const triggers = document.querySelectorAll('.photo-strip-item img');

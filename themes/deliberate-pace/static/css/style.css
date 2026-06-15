@@ -1078,6 +1078,271 @@ footer {
   margin-bottom: 3rem;
 }
 
+/* FIELD NOTES */
+.field-notes-heading {
+  margin-bottom: 1rem;
+}
+
+.field-notes-intro {
+  max-width: 640px;
+  margin-bottom: 3rem;
+  color: var(--stone);
+  font-size: 1.05rem;
+}
+
+.field-notes-empty {
+  color: var(--stone);
+}
+
+.note-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+.note-card {
+  background: var(--white);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.note-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+.note-img {
+  display: block;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.note-body {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.note-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--stone);
+}
+
+.note-region {
+  position: relative;
+  padding-left: 0.85rem;
+  color: var(--moss);
+}
+
+.note-region::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--moss);
+  transform: translateY(-50%);
+}
+
+.note-title {
+  font-size: 1.4rem;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+.note-title a {
+  color: var(--forest);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.note-title a:hover {
+  color: var(--moss);
+}
+
+.note-summary {
+  color: var(--stone);
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+.note-readmore {
+  align-self: flex-start;
+  color: var(--moss);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.note-readmore:hover {
+  text-decoration: underline;
+}
+
+/* FIELD NOTE — SINGLE */
+.note-single {
+  max-width: 720px;
+}
+
+.note-back {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: var(--moss);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.note-back:hover {
+  text-decoration: underline;
+}
+
+.note-single-heading {
+  margin-bottom: 0.75rem;
+}
+
+.note-single-meta {
+  margin-bottom: 2rem;
+}
+
+.note-location {
+  color: var(--moss);
+}
+
+.note-single-img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 2.5rem;
+}
+
+.note-content {
+  color: var(--stone);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.note-content p {
+  margin-bottom: 1.5rem;
+}
+
+.note-content h2 {
+  color: var(--forest);
+  font-size: 1.5rem;
+  margin: 2.5rem 0 1rem;
+}
+
+.note-content a {
+  color: var(--moss);
+  text-decoration: underline;
+}
+
+.note-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 1.5rem 0;
+}
+
+.note-footer-cta {
+  margin-top: 3.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.note-footer-cta p {
+  color: var(--stone);
+  margin-bottom: 1rem;
+}
+
+.note-gallery-credit {
+  margin-top: 1rem;
+  color: var(--stone);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+/* CONTACT MODAL */
+button.region-cta {
+  border: none;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+}
+
+.contact-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.contact-modal.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.contact-modal-inner {
+  background: var(--cream);
+  border-radius: 4px;
+  padding: 2.5rem;
+  max-width: 540px;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+}
+
+.contact-modal-inner h2 {
+  color: var(--forest);
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-modal-inner > p {
+  color: var(--stone);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: var(--stone);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+
+.contact-modal-close:hover {
+  color: var(--forest);
+}
+
 .policy-section {
   margin-bottom: 2.5rem;
 }

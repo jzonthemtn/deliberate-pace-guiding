@@ -1,0 +1,42 @@
+{{ define "main" }}
+<section class="policy-page field-note-single">
+  <div class="container note-single">
+    <a href="{{ .Parent.RelPermalink }}" class="note-back fade-in">&larr; All Field Notes</a>
+    <h1 class="policy-heading note-single-heading fade-in">{{ .Title }}</h1>
+    <div class="note-meta note-single-meta fade-in">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+      {{ with .Params.location }}<span class="note-location">{{ . }}</span>{{ end }}
+    </div>
+    {{ with .Params.image }}
+    <img src="{{ . }}" alt="{{ $.Params.imageAlt | default $.Title }}" class="note-single-img fade-in" loading="lazy">
+    {{ end }}
+    <div class="note-content fade-in">
+      {{ .Content }}
+    </div>
+    {{ with .Params.gallery }}
+    <div class="photo-strip note-gallery fade-in">
+      {{ range . }}
+      <figure class="photo-strip-item">
+        <img src="{{ .src }}" alt="{{ .alt | default .caption }}" loading="lazy">
+        {{ with .caption }}<figcaption class="photo-strip-caption">{{ . }}</figcaption>{{ end }}
+      </figure>
+      {{ end }}
+    </div>
+    <p class="note-gallery-credit fade-in">All photos are original, taken on this hike.</p>
+    {{ end }}
+    <div class="note-footer-cta fade-in">
+      <p>Want a day like this on your own calendar?</p>
+      <button type="button" class="region-cta" data-contact-open>Start a Conversation</button>
+    </div>
+  </div>
+
+  <div id="contact-modal" class="contact-modal" aria-hidden="true">
+    <div class="contact-modal-inner" role="dialog" aria-modal="true" aria-label="Contact form">
+      <button class="contact-modal-close" type="button" aria-label="Close contact form">&times;</button>
+      <h2>Start a Conversation</h2>
+      <p>Tell me what you&rsquo;re looking for and we&rsquo;ll find the right trail together.</p>
+      {{ partial "contact-form.html" (dict "class" "") }}
+    </div>
+  </div>
+</section>
+{{ end }}
