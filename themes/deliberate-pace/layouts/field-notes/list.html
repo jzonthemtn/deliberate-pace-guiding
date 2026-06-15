@@ -14,7 +14,7 @@
         {{ end }}
         <div class="note-body">
           <div class="note-meta">
-            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+            <time datetime="{{ .Date.Format "2006-01" }}">{{ .Date.Format "January 2006" }}</time>
             {{ with .Params.region }}<span class="note-region">{{ . }}</span>{{ end }}
           </div>
           <h2 class="note-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>

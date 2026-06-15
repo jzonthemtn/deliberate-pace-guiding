@@ -4,7 +4,7 @@
     <a href="{{ .Parent.RelPermalink }}" class="note-back fade-in">&larr; All Field Notes</a>
     <h1 class="policy-heading note-single-heading fade-in">{{ .Title }}</h1>
     <div class="note-meta note-single-meta fade-in">
-      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+      <time datetime="{{ .Date.Format "2006-01" }}">{{ .Date.Format "January 2006" }}</time>
       {{ with .Params.location }}<span class="note-location">{{ . }}</span>{{ end }}
     </div>
     {{ with .Params.image }}
